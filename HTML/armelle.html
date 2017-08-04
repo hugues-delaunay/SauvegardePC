@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            background-color: gray;
+            position: absolute;
+            margin: 0.1em;
+        }
+        
+        .header {
+            order: 1;
+            flex-grow: 0;
+            flex-shrink: 0;
+            border-radius: 15px;
+            background-color: palegoldenrod;
+            flex-basis: auto;
+        }
+        
+        .middle {
+            order: 2;
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-flow: row wrap;
+            align-items: stretch;
+        }
+        
+        .nav {
+            order: 3;
+            flex-grow: 1;
+            flex-shrink: 1;
+            border-radius: 15px;
+            background-color: plum;
+        }
+        
+        .article {
+            order: 4;
+            flex-grow: 3;
+            flex-shrink: 3;
+            border-radius: 15px;
+            background-color: yellowgreen;
+        }
+        
+        .aside {
+            order: 5;
+            flex-grow: 1;
+            flex-shrink: 1;
+            border-radius: 15px;
+            background-color: plum;
+        }
+        
+        .footer {
+            order: 6;
+            border-radius: 15px;
+            background-color: palegoldenrod;
+        }
+        
+        @media (max-width: 700px) {
+            .header {
+                order: 1;
+            }
+            .middle {
+                order: 2;
+                flex-flow: column nowrap;
+            }
+            .nav {
+                order: 4;
+            }
+            .article {
+                order: 3;
+            }
+            .aside {
+                order: 5;
+            }
+            .footer {
+                order: 6;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+        HEADER
+    </div>
+    <div class="middle">
+        <div class="nav">
+            NAV
+        </div>
+
+        <div class="article">
+            ARTICLE
+        </div>
+
+        <div class="aside">
+            ASIDE
+        </div>
+    </div>
+    <div class="footer">
+        FOOTER
+    </div>
+
+
+
+</body>
+
+</html>

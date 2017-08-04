@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <style>
+        p {
+            color: red;
+        }
+        
+        strong {
+            color: chartreuse;
+        }
+        
+        .rouge {
+            color: blue
+        }
+        
+        .avertissement {
+            font-weight: bolder;
+        }
+        
+        .urgent:hover {
+            font-size: 300%;
+        }
+        
+        #data-table-1 td:first-child {
+            font-weight: bolder;
+        }
+        
+        #data-table-1 td:first-child+td {
+            font-family: monospace;
+        }
+        
+        p::first-letter {
+            float: left;
+            font-size: 2em;
+            font-weight: bold;
+            font-family: cursive;
+            padding-right: 2px;
+        }
+        
+        ul {
+            width: 200px;
+            background: #292929;
+            color: white;
+            list-style: none;
+            padding-left: 0;
+            vertical-align: middle;
+        }
+        
+        li {
+            padding: 10px;
+            border-bottom: 1px solid black;
+            border-top: 1px solid #3c3c3c;
+            vertical-align: middle;
+        }
+        
+        h3 {
+            border: 6px dashed black;
+            border-top: 4px solid #7c7;
+        }
+        
+        p.remark {
+            border: 10px solid red;
+            padding: 4px;
+            padding-left: 44px;
+            margin-left: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Quelque chose</h1>
+    <p>Cascading Style Sheets</p>
+    <img style='float:left;' src='magnum.jpg' />
+    <img style='float:right;' src='magnum.jpg' />
+    <p>Un autre paragraphe après</p>
+    <p style='clear:left;'>Un autre paragraphe après</p>
+
+    <p>
+        <strong>C</strong>ascading
+        <strong>S</strong>tyle
+        <strong>S</strong>heets
+    </p>
+    <p class='rouge avertissement urgent'>Un paragraphe</p>
+    <table id="data-table-1">
+        <tr>
+            <td>Prefix</td>
+            <td>0001</td>
+            <td>default</td>
+        </tr>
+        <tr>
+            <td>Prefix</td>
+            <td>0002</td>
+            <td>default</td>
+        </tr>
+    </table>
+    <ul>
+        <li> Item1 </li>
+        <li> Item2 </li>
+        <li> Item3 </li>
+    </ul>
+
+    <h3>Salut</h3>
+    <p class="remark">lkdqfvô</p>
+
+</body>
+
+</html>

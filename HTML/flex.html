@@ -1,0 +1,201 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!DOCTYPE html>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            position: absolute;
+            background-color: beige;
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        
+        .header {
+            margin: 0;
+            background-color: black;
+            color: white;
+            display: flex;
+            order: 1;
+            flex: 0 0 auto;
+            flex-flow: row wrap;
+            align-content: flex-start;
+            justify-content: space-around;
+            list-style: none;
+        }
+        
+        ul li {
+            flex: 0 1 auto;
+            line-height: 2em;
+            padding: 0 3em;
+            transition-duration: 3s;
+            transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        
+        ul li:hover {
+            background-color: transparent;
+            color: red;
+            font-size: 3em;
+            transform: rotateX(720deg) rotateY(720deg) rotateZ(720deg);
+            transition-duration: 3.0s;
+        }
+        
+        .corpus {
+            order: 2;
+            flex-grow: 1;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            background-color: beige;
+            width: 100%;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        
+        .corps {
+            display: flex;
+            flex-flow: column nowrap;
+            margin: .5em;
+            justify-content: center;
+            flex-basis: 10em;
+            flex: 0 0 300px;
+            height: 20em;
+            overflow: hidden;
+        }
+        
+        .titre {
+            background-color: black;
+            color: grey;
+            padding: 5px;
+            border-top-left-radius: 1px;
+            border-top-right-radius: 1px;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+        
+        .texte {
+            background-color: paleturquoise;
+            height: 40%;
+            overflow: auto;
+        }
+        
+        .pied {
+            background-color: blue;
+            color: white;
+            padding: 5px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            border-bottom-left-radius: 1px;
+            border-bottom-right-radius: 1px;
+        }
+        /*corps {
+            height: 15em;
+            flex: 0 0 10em;
+            display: flex;
+            flex-flow: column nowrap;
+            border-radius: 1em;
+            overflow: hidden;
+            margin: .6em;
+        }
+        
+        .corps>.titre,
+        .corps>.pied {
+            flex: 0 0 auto;
+            background-color: pink;
+        }
+        
+        .corps>.texte {
+            flex-grow: 1;
+            flex-shrink: 1;
+            overflow: auto;
+        }
+        .card img {
+            float: right;
+            width: 3em;
+            height: 4em;
+        }*/
+        
+        .footer {
+            order: 3;
+            flex: 0 0 auto;
+            background-color: black;
+            color: white;
+        }
+        
+        @media(max_width: 700px) {
+            body {
+                margin: 0;
+            }
+            .header {
+                flex-grow: 1;
+                flex-shrink: 1;
+            }
+            .corpus {
+                flex-flow: column nowrap;
+                justify-content: flex-start;
+            }
+            .corp {
+                flex-basis: auto;
+                height: initial;
+                flex-flow: row nowrap;
+                border-radius: 0;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="header">
+        <li>
+            Fichier
+        </li>
+        <li>
+            Affichage
+        </li>
+        <li>
+            A propos
+        </li>
+    </ul>
+
+    <div class="corpus">
+        <div class="corps">
+            <div class="titre"> Entête</div>
+            <div class="texte"> <img style='float:right;' src='magnum.jpg' /> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dolor quaerat adipisci, sed odio eaque voluptatum optio ut, fugit incidunt ratione ducimus at. Facere neque voluptates perspiciatis
+                quo, sapiente deserunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dolor quaerat adipisci, sed odio eaque voluptatum optio ut, fugit incidunt ratione ducimus at. Facere neque voluptates perspiciatis quo, sapiente deserunt.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dolor quaerat adipisci, sed odio eaque voluptatum optio ut, fugit incidunt ratione ducimus at. Facere neque voluptates perspiciatis quo, sapiente deserunt.
+            </div>
+            <div class="pied">Pied</div>
+        </div>
+        <div class="corps">
+            <div class="titre"> Entête</div>
+            <div class="texte"> <img style='float:right;' src='magnum.jpg' /> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dolor quaerat adipisci, sed odio eaque voluptatum optio ut, fugit incidunt ratione ducimus at. Facere neque voluptates perspiciatis
+                quo, sapiente deserunt.
+            </div>
+            <div class="pied">Pied</div>
+        </div>
+        <div class="corps">
+            <div class="titre"> Entête</div>
+            <div class="texte"> <img style='float:right;' src='magnum.jpg' /> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dolor quaerat adipisci, sed odio eaque voluptatum optio ut, fugit incidunt ratione ducimus at. Facere neque voluptates perspiciatis
+                quo, sapiente deserunt.
+            </div>
+            <div class="pied">Pied</div>
+        </div>
+    </div>
+    <div class="footer"> Footer</div>
+</body>
+
+
+
+</html>
